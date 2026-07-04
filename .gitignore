@@ -1,0 +1,87 @@
+# ==============================================================================
+# macOS / System Files
+# ==============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon_
+._*
+.Spotlight-V100
+.Trashes
+*.icloud
+
+# ==============================================================================
+# Node.js / pnpm / Monorepo Dependencies
+# ==============================================================================
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+
+# ==============================================================================
+# Build & Output Directories (Next, Vite, Nest, Fastify build outputs)
+# ==============================================================================
+dist/
+build/
+.next/
+out/
+.pnpm-home
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL for LLM, Alexa & DB keys)
+# ==============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+!*.env.example # Non ignorare il file di esempio per il team/repo
+
+# ==============================================================================
+# Docker & Local Infrastructure Data
+# ==============================================================================
+# Ignora i dati locali persistiti dai container (Postgres, Redis, Mosquitto)
+# per evitare di pushare pesate o log storici sul repo.
+postgres_data/
+redis_data/
+mosquitto/data/
+mosquitto/log/
+
+# ==============================================================================
+# Editors & IDEs
+# ==============================================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ==============================================================================
+# Logs & Diagnostic Data
+# ==============================================================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================================================
+# Testing & Coverage
+# ==============================================================================
+.nyc_output
+coverage/
+.jest/
+
+# ==============================================================================
+# Optional: Cloudflare / Alexa deployment artifacts
+# ==============================================================================
+.cloudflare
+.ask/
+lambda-pkg.zip
